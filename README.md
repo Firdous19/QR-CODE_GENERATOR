@@ -1,4 +1,3 @@
-```markdown
 # QR Code Generator
 
 This Node.js project generates QR codes for URLs provided by users. When the generated QR code is scanned, it opens the specified URL. The project utilizes the 'qrcode' library to create QR code images.
