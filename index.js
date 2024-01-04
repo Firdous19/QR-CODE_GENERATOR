@@ -10,6 +10,13 @@ inquirer
         const url = answers.url;
         const qr_svg = qr.image(url, { type: 'png' });
         qr_svg.pipe(fs.createWriteStream('qr_image.png'));
+        const log = `${Date.now()} : URL - ${url}\n`;
+        fs.appendFile('log.txt', log, (err) => {
+            if (err) {
+                console.log("Error occurred");
+            }
+            console.log("URL saved succesfully");
+        })
     })
     .catch((error) => {
         if (error.isTtyError) {
